@@ -2,6 +2,7 @@ package app
 
 import (
 	"net/http"
+	"os"
 	"strings"
 
 	"github.com/dchest/uniuri"
@@ -37,7 +38,7 @@ func (s *Server) GenerateLink() gin.HandlerFunc {
 
 		c.JSON(http.StatusOK, gin.H{
 			"unique_code": uniqueCode,
-			"image_url":   "http://localhost:8000/image/" + uniqueCode + ".png",
+			"image_url":   os.Getenv("BASE_URL") + "/image/" + uniqueCode + ".png",
 		})
 	}
 }
