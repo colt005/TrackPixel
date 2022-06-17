@@ -1,6 +1,9 @@
 package app
 
 import (
+	"fmt"
+	"os"
+
 	"github.com/colt005/TrackPixel/pkg/api"
 	"github.com/gin-gonic/gin"
 	logger "github.com/sirupsen/logrus"
@@ -23,7 +26,7 @@ func (s *Server) Run() error {
 	r := s.Routes()
 
 	// run the server through the router
-	err := r.Run(":8000")
+	err := r.Run(fmt.Sprintf(":%s", os.Getenv("PORT")))
 
 	if err != nil {
 		logger.Error(err)
