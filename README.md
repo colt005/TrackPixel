@@ -21,7 +21,7 @@ A GoLang REST API server for creating and tracking email pixel tracker images.
 
 1. Clone the repo
 ```sh
-git clone https://github.com/colt005/thumbify.git
+git clone https://github.com/colt005/TrackPixel.git
 ```
 2. Download and install [Quest DB](https://questdb.io/get-questdb/), then run it locally or deploy it on a server. 
 
