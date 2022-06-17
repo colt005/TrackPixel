@@ -36,7 +36,7 @@ export CONN_STRING=<Connection url of the PSQL wire protocol which questDB expos
 ```go
 go build -o TrackPixel
 ```
-3. Use the binary to run local server
+5. Use the binary to run local server
 ```sh
 ./TrackPixel
 ```
